@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProyectoFinal.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProyectoFinal.PaginasMenu"
+    FlyoutBehavior="Flyout">
+
+    <!-- Página inicial: WelcomePage -->
+    <ShellContent Route="Inicio" FlyoutItemIsVisible="False" ContentTemplate="{DataTemplate local:Inicio}" />
+
+    <FlyoutItem Title="P.O">
+        <ShellContent
+            Title="P.O"
+            ContentTemplate="{DataTemplate local:PO}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Medicamentos">
+        <ShellContent
+            Title="Medicamentos"
+            ContentTemplate="{DataTemplate local:Medicamentos}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Fungible">
+        <ShellContent
+            Title="Fungible"
+            ContentTemplate="{DataTemplate local:Fungible}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Equipos">
+        <ShellContent
+            Title="Equipos"
+            ContentTemplate="{DataTemplate local:Equipos}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Calculadora de Dosis">
+        <ShellContent
+            Title="Claucladora de Dosis"
+            ContentTemplate="{DataTemplate local:Calculadora}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Cuadrante">
+        <ShellContent
+            Title="Cuadrante"
+            ContentTemplate="{DataTemplate local:Cuadrante}"/>
+    </FlyoutItem>
+
+</Shell>

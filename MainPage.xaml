@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.MainPage">
+
+    
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <!-- Imagen en la página de inicio de sesión -->
+        <Image Source="logo.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" />
+
+        <Label Text="Usuario" FontSize="Medium"/>
+        <Entry x:Name="userEntry" Placeholder="Ingrese su usuario"/>
+
+        <Label Text="Contraseña" FontSize="Medium"/>
+        <Entry x:Name="passwordEntry" IsPassword="True" Placeholder="Ingrese su contraseña"/>
+
+        <Button Text="Iniciar Sesión" Clicked="OnLoginClicked"/>
+
+        <Label x:Name="errorLabel" TextColor="Red" IsVisible="False"/>
+    </VerticalStackLayout>
+
+</ContentPage>

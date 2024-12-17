@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.PaginasMenu.Calculadora"
+             Title="Calculadora">
+
+    <AbsoluteLayout>
+
+        <!-- Peso -->
+        <Label Text="Peso:" 
+               AbsoluteLayout.LayoutBounds="0.1, 0.1, AutoSize, AutoSize" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Entry x:Name="pesoEntry" 
+               Keyboard="Numeric" 
+               HeightRequest="50"
+               WidthRequest="270"
+               AbsoluteLayout.LayoutBounds="0.5, 0.1, 200, AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Picker x:Name="unidadPesoPicker" 
+                SelectedIndexChanged="UnidadPesoPicker_SelectedIndexChanged" 
+                HeightRequest="50"
+                AbsoluteLayout.LayoutBounds="0.9, 0.1, 100, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Kilogramos</x:String>
+                    <x:String>Libras</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Dosis por kg de peso -->
+        <Label Text="Dosis por kg de peso (mg/kg):" 
+               AbsoluteLayout.LayoutBounds="0.1, 0.25, AutoSize, AutoSize" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Entry x:Name="dosisPorKgEntry" 
+               Keyboard="Numeric" 
+               HeightRequest="50" 
+               WidthRequest="230"
+               AbsoluteLayout.LayoutBounds="0.5, 0.25, 200, AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Picker x:Name="unidadDosisPicker" 
+                SelectedIndexChanged="UnidadDosisPicker_SelectedIndexChanged" 
+                HeightRequest="50"
+                AbsoluteLayout.LayoutBounds="0.9, 0.25, 100, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Miligramos</x:String>
+                    <x:String>Gramos</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Dosis a Administrar -->
+        <Label Text="Dosis a Administrar:" 
+               AbsoluteLayout.LayoutBounds="0.1, 0.4, AutoSize, AutoSize" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Entry x:Name="dosisAdministrarEntry" 
+               Keyboard="Numeric" 
+               HeightRequest="50" 
+               WidthRequest="270"
+               AbsoluteLayout.LayoutBounds="0.5, 0.4, 200, AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Picker x:Name="unidadDosisAdministrarPicker" 
+                SelectedIndexChanged="UnidadDosisAdministrarPicker_SelectedIndexChanged" 
+                HeightRequest="50"
+                AbsoluteLayout.LayoutBounds="0.9, 0.4, 100, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Miligramos</x:String>
+                    <x:String>Gramos</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Frecuencia -->
+        <Label Text="Frecuencia:" 
+               AbsoluteLayout.LayoutBounds="0.1, 0.55, AutoSize, AutoSize" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Picker x:Name="frecuenciaPicker" 
+                SelectedIndexChanged="FrecuenciaPicker_SelectedIndexChanged"
+                HeightRequest="50"
+                WidthRequest="270"
+                AbsoluteLayout.LayoutBounds="0.5, 0.55, 200, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Una vez al día</x:String>
+                    <x:String>Dos veces al día</x:String>
+                    <x:String>Tres veces al día</x:String>
+                    <x:String>Cuatro veces al día</x:String>
+                    <x:String>Cada 4 horas</x:String>
+                    <x:String>Cada 3 horas</x:String>
+                    <x:String>Cada 2 horas</x:String>
+                    <x:String>Cada hora</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Botón de Calcular Dosis -->
+        <Button Text="Calcular Dosis" 
+                Clicked="OnCalculateDosisClicked" 
+                HeightRequest="50"
+                AbsoluteLayout.LayoutBounds="0.5, 0.7, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <!-- Resultados -->
+        <Label x:Name="resultadoDosisLabel" 
+               Text="" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.8, AutoSize, AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Label x:Name="resultadoDosisDiariaLabel" 
+               Text="" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.85, AutoSize, AutoSize"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+    </AbsoluteLayout>
+
+
+</ContentPage>
